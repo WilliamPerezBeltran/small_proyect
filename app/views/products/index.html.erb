@@ -22,6 +22,7 @@
 					<td><%= product.url %></td>
 					<td><%= product.description %></td>
 					<td><%= link_to 'Detalle', product_path(product) %></td>
+					<td><%= link_to 'Editar', edit_product_path(product) %></td>
 				</tr>
 				<% end %>
 			</table>
