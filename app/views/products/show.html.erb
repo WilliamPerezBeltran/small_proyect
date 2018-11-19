@@ -1,2 +1,15 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>Detalle del producto</h1>
+			<h3>Nombre del producto:</h3>
+			<p><%= @product.name %></p>
+			<h3>Descripión: </h3>
+			<p><%= @product.description %></p>
+			<h3>url:</h3>
+			<a href="<%= @product.url %>" target="_blank">¡Obtenlo!</a>
+
+			
+		</div>
+	</div>
+</div>
