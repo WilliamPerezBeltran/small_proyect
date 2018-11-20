@@ -1,39 +1,17 @@
 <div class="container">
-	<div class="row">
-		<div class="col-sm-12">
-			<h1>Productos</h1>
-			<div class="text-right">
-				<%= link_to "Crear producto",new_product_path , class:'btn btn-primary '  %>
-			</div>
-			<br>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
 
-			<table class="table table-bordered">
-				<tr>
-					<th>Id</th>
-					<th>Nombre</th>
-					<th>URL</th>
-					<th>Descripción</th>
-					<th></th>
-					<th></th>
-					<th></th>
-				</tr>
-				<% @products.each do |product| %>
-				<tr>
-					<td><%= product.id %></td>
-					<td><%= product.name %></td>
-					<td><%= product.url %></td>
-					<td><%= product.description %></td>
-					<td><%= link_to 'Detalle', product_path(product) %></td>
-					<td><%= link_to 'Editar', edit_product_path(product) %></td>
-					<td><%= link_to 'Eliminar', product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" }%></td>
-
-
-
-				</tr>
-				<% end %>
-			</table>
-			
-		</div>
-	</div>
+      <div class="products">
+        <% @products.each do |product| %>
+        <div class="product clearfix">
+          <div class="product-details">
+            <span class="product-title"><%= link_to product.name, product %></span>
+            <span class="product-description"><%= product.description %></span>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
