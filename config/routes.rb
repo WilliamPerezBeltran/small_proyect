@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :products
   root 'products#index'
   # devise_for :users, :controllers => { registrations: 'registrations' }
+  resources :products do
+  	resources :comments, only:[:create]
+  end
 
 
 
